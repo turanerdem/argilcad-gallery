@@ -1,0 +1,332 @@
+{
+  "schema": 1,
+  "id": "g_05ae8336",
+  "slug": "istanbul-marble-machine",
+  "title": {
+    "en": "Istanbul Marble Machine",
+    "tr": "İstanbul Bilye Makinesi"
+  },
+  "summary": {
+    "en": "A kinetic desk piece: turn the crank and a screw lift carries a marble up the Galata Tower, over the Bosphorus Bridge, round the Maiden's Tower and home along the aqueduct, while four cats spin on their gears.",
+    "tr": "Kinetik masa objesi: kolu çevir, vidalı asansör bilyeyi Galata Kulesi'nden yukarı taşır; bilye Boğaz Köprüsü'nden geçip Kız Kulesi'nin etrafında döner ve su kemerinden geri gelir. Dört kedi dişlilerinin üstünde döner."
+  },
+  "tags": [
+    "marble-run",
+    "kinetic",
+    "gears",
+    "istanbul",
+    "desk-toy"
+  ],
+  "category": "toys",
+  "source": {
+    "kind": "own_ai"
+  },
+  "author": {
+    "display": "Argil Design",
+    "uid_hash": null
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "2026 Argil Design",
+  "ai_training": "allowed",
+  "consent": {
+    "showcase": true,
+    "prompt": false,
+    "terms_version": "owner",
+    "recorded": "2026-10-23"
+  },
+  "derived_from": null,
+  "engine": {
+    "python": "3.12",
+    "build123d": "0.11.1",
+    "ocp": "7.9.3.1.1",
+    "bd_warehouse": "0.2.0"
+  },
+  "metrics": {
+    "bbox": [
+      250.0,
+      180.0,
+      217.878
+    ],
+    "volume": 793626.312,
+    "area": 335999.413,
+    "face_count": 2369,
+    "edge_count": 6467,
+    "vertex_count": 4180,
+    "parts": [
+      {
+        "name": "base",
+        "label": "base",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 358488.427
+      },
+      {
+        "name": "galata_tower",
+        "label": "galata_tower",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 129242.095
+      },
+      {
+        "name": "screw_lift",
+        "label": "screw_lift",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 29842.146
+      },
+      {
+        "name": "idler_gear",
+        "label": "idler_gear",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 2512.582
+      },
+      {
+        "name": "crank_gear",
+        "label": "crank_gear",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 16364.607
+      },
+      {
+        "name": "cat_1",
+        "label": "cat_1",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 5138.315
+      },
+      {
+        "name": "cat_2",
+        "label": "cat_2",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 5138.315
+      },
+      {
+        "name": "cat_3",
+        "label": "cat_3",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 5138.315
+      },
+      {
+        "name": "cat_4",
+        "label": "cat_4",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 5138.315
+      },
+      {
+        "name": "sea",
+        "label": "sea",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 4462.565
+      },
+      {
+        "name": "island",
+        "label": "island",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 45691.197
+      },
+      {
+        "name": "maidens_tower",
+        "label": "maidens_tower",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 120974.171
+      },
+      {
+        "name": "bosphorus_bridge",
+        "label": "bosphorus_bridge",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 31299.975
+      },
+      {
+        "name": "aqueduct",
+        "label": "aqueduct",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 27761.304
+      },
+      {
+        "name": "marble_1",
+        "label": "marble_1",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 2144.661
+      },
+      {
+        "name": "marble_2",
+        "label": "marble_2",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 2144.661
+      },
+      {
+        "name": "marble_3",
+        "label": "marble_3",
+        "path": [
+          "istanbul_marble_machine"
+        ],
+        "volume": 2144.661
+      }
+    ],
+    "build_ms": 10429
+  },
+  "fingerprint": {
+    "code_norm_sha256": "adf93e9269b2579aaf6bb11e03fd6e737052f28675157a2a73f2d1fb52bdc5c9",
+    "geom": [
+      0.72,
+      0.8715,
+      0.0809,
+      39.1978,
+      7.7706,
+      2.8904
+    ]
+  },
+  "media": [
+    {
+      "file": "model.glb",
+      "kind": "model",
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/thumb.webp",
+      "kind": "thumb",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        512,
+        512
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/og.jpg",
+      "kind": "og",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        1200,
+        630
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/turntable.webp",
+      "kind": "turntable",
+      "look": "materials",
+      "size": [
+        480,
+        480
+      ],
+      "frames": 36,
+      "fps": 7.2,
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/iso.png",
+      "kind": "view",
+      "view": "iso",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          -1,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/front.png",
+      "kind": "view",
+      "view": "front",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          -1,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/top.png",
+      "kind": "view",
+      "view": "top",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          0,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/right.png",
+      "kind": "view",
+      "view": "right",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          0,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    }
+  ],
+  "created": "2026-10-01",
+  "verified": {
+    "date": "2026-10-23",
+    "build123d": "0.11.1"
+  }
+}

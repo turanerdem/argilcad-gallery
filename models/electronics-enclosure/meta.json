@@ -1,0 +1,217 @@
+{
+  "schema": 1,
+  "id": "g_08dddf0e",
+  "slug": "electronics-enclosure",
+  "title": {
+    "en": "Electronics Enclosure",
+    "tr": "Elektronik Kutusu"
+  },
+  "summary": {
+    "en": "An 80 × 60 × 30 mm project box with 2 mm walls, rounded corners and four M3 screw bosses.",
+    "tr": "80 × 60 × 30 mm proje kutusu: 2 mm duvar, yuvarlatılmış köşeler ve dört M3 vida yuvası."
+  },
+  "tags": [
+    "enclosure",
+    "electronics",
+    "box",
+    "screw-boss"
+  ],
+  "category": "enclosures",
+  "source": {
+    "kind": "app_llm"
+  },
+  "author": {
+    "display": "Argil Design",
+    "uid_hash": null
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "2026 Argil Design",
+  "ai_training": "allowed",
+  "consent": {
+    "showcase": true,
+    "prompt": false,
+    "terms_version": "owner",
+    "recorded": "2026-10-23"
+  },
+  "derived_from": null,
+  "engine": {
+    "python": "3.12",
+    "build123d": "0.11.1",
+    "ocp": "7.9.3.1.1",
+    "bd_warehouse": "0.2.0"
+  },
+  "params": [
+    {
+      "name": "corner",
+      "default": 4,
+      "min": 0,
+      "max": 12,
+      "unit": "mm"
+    },
+    {
+      "name": "wall",
+      "default": 2,
+      "min": 1.2,
+      "max": 4,
+      "unit": "mm"
+    }
+  ],
+  "metrics": {
+    "bbox": [
+      80.0,
+      60.0,
+      30.0
+    ],
+    "volume": 28907.299,
+    "area": 28721.699,
+    "face_count": 43,
+    "edge_count": 92,
+    "vertex_count": 56,
+    "parts": [
+      {
+        "name": "part 1",
+        "label": null,
+        "path": [],
+        "volume": 28907.299
+      }
+    ],
+    "build_ms": 1724
+  },
+  "fingerprint": {
+    "code_norm_sha256": "512d598dfe46cb2e16827b6b0f2bebf22ecee02072eb36d686ebb0fb6270499e",
+    "geom": [
+      0.375,
+      0.75,
+      0.2007,
+      30.4933,
+      3.7842,
+      0.6931
+    ]
+  },
+  "media": [
+    {
+      "file": "model.glb",
+      "kind": "model",
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/thumb.webp",
+      "kind": "thumb",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        512,
+        512
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/og.jpg",
+      "kind": "og",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        1200,
+        630
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/turntable.webp",
+      "kind": "turntable",
+      "look": "materials",
+      "size": [
+        480,
+        480
+      ],
+      "frames": 36,
+      "fps": 7.2,
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/iso.png",
+      "kind": "view",
+      "view": "iso",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          -1,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/front.png",
+      "kind": "view",
+      "view": "front",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          -1,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/top.png",
+      "kind": "view",
+      "view": "top",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          0,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/right.png",
+      "kind": "view",
+      "view": "right",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          0,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    }
+  ],
+  "created": "2026-09-08",
+  "verified": {
+    "date": "2026-10-23",
+    "build123d": "0.11.1"
+  }
+}

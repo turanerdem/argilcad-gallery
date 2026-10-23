@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "id": "g_4e5ef637",
+  "slug": "twisted-vase",
+  "title": {
+    "en": "Twisted Vase",
+    "tr": "Burgulu Vazo"
+  },
+  "summary": {
+    "en": "A hexagonal vase twisted from bottom to top — a vase-mode favourite. Change the sides, the twist or the height.",
+    "tr": "Alttan üste burulmuş altıgen vazo; vazo modunda basılmaya çok uygun. Kenar sayısını, burulmayı ya da yüksekliği değiştir."
+  },
+  "tags": [
+    "vase",
+    "vase-mode",
+    "twist",
+    "home-decor"
+  ],
+  "category": "home",
+  "source": {
+    "kind": "hand"
+  },
+  "author": {
+    "display": "Argil Design",
+    "uid_hash": null
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "2026 Argil Design",
+  "ai_training": "allowed",
+  "consent": {
+    "showcase": true,
+    "prompt": false,
+    "terms_version": "owner",
+    "recorded": "2026-10-23"
+  },
+  "derived_from": null,
+  "engine": {
+    "python": "3.12",
+    "build123d": "0.11.1",
+    "ocp": "7.9.3.1.1",
+    "bd_warehouse": "0.2.0"
+  },
+  "params": [
+    {
+      "name": "height",
+      "default": 120.0,
+      "min": 40,
+      "max": 250,
+      "unit": "mm"
+    },
+    {
+      "name": "radius",
+      "default": 34.0,
+      "min": 15,
+      "max": 80,
+      "unit": "mm"
+    },
+    {
+      "name": "sides",
+      "default": 6,
+      "min": 3,
+      "max": 12
+    },
+    {
+      "name": "twist",
+      "default": 60,
+      "min": 0,
+      "max": 180,
+      "unit": "°"
+    },
+    {
+      "name": "wall",
+      "default": 1.6,
+      "min": 0.8,
+      "max": 4,
+      "unit": "mm"
+    }
+  ],
+  "metrics": {
+    "bbox": [
+      62.717,
+      65.983,
+      120.0
+    ],
+    "volume": 38074.572,
+    "area": 47175.135,
+    "face_count": 27,
+    "edge_count": 72,
+    "vertex_count": 48,
+    "parts": [
+      {
+        "name": "part 1",
+        "label": null,
+        "path": [],
+        "volume": 38074.572
+      }
+    ],
+    "build_ms": 2491
+  },
+  "fingerprint": {
+    "code_norm_sha256": "1545984511bfbf7e74c5377165b787da1815c46c12b381fd5c376e46893fe7e0",
+    "geom": [
+      0.5226,
+      0.5499,
+      0.0767,
+      41.6828,
+      3.3322,
+      0.6931
+    ]
+  },
+  "media": [
+    {
+      "file": "model.glb",
+      "kind": "model",
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/thumb.webp",
+      "kind": "thumb",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        512,
+        512
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/og.jpg",
+      "kind": "og",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        1200,
+        630
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/turntable.webp",
+      "kind": "turntable",
+      "look": "materials",
+      "size": [
+        480,
+        480
+      ],
+      "frames": 36,
+      "fps": 7.2,
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/iso.png",
+      "kind": "view",
+      "view": "iso",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          -1,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/front.png",
+      "kind": "view",
+      "view": "front",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          -1,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/top.png",
+      "kind": "view",
+      "view": "top",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          0,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/right.png",
+      "kind": "view",
+      "view": "right",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          0,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    }
+  ],
+  "created": "2026-09-15",
+  "verified": {
+    "date": "2026-10-23",
+    "build123d": "0.11.1"
+  }
+}

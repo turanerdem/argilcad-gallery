@@ -1,0 +1,14 @@
+# The CAD stack, pinned to the versions ArgilCAD runs. A model is checked
+# against the numbers the app measured, so these move only together with
+# the app — then run `python tools/gallery.py reverify`.
+build123d==0.11.1
+cadquery-ocp-novtk==7.9.3.1.1
+bd_warehouse==0.2.0
+ocpsvg==0.6.0
+ocp_gordon==0.2.0
+numpy>=1.26.0
+
+# The gallery's own checks.
+jsonschema==4.23.0
+pillow==11.3.0
+reuse==5.0.2

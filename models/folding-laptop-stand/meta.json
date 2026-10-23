@@ -1,0 +1,266 @@
+{
+  "schema": 1,
+  "id": "g_1ff169c7",
+  "slug": "folding-laptop-stand",
+  "title": {
+    "en": "Folding Laptop Stand",
+    "tr": "Katlanır Laptop Standı"
+  },
+  "summary": {
+    "en": "Base, arm and tray joined by two pinned hinges, modelled folded flat. Every dimension is a variable — fit it to any laptop.",
+    "tr": "Taban, kol ve tepsi iki pimli menteşeyle bağlı, düz katlanmış halde modellenmiş. Her ölçü bir değişken; her laptopa uyarlanabilir."
+  },
+  "tags": [
+    "laptop-stand",
+    "hinge",
+    "desk",
+    "folding"
+  ],
+  "category": "tools",
+  "source": {
+    "kind": "mcp",
+    "client": "Claude Desktop"
+  },
+  "author": {
+    "display": "Argil Design",
+    "uid_hash": null
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "2026 Argil Design",
+  "ai_training": "allowed",
+  "consent": {
+    "showcase": true,
+    "prompt": false,
+    "terms_version": "owner",
+    "recorded": "2026-10-23"
+  },
+  "derived_from": null,
+  "engine": {
+    "python": "3.12",
+    "build123d": "0.11.1",
+    "ocp": "7.9.3.1.1",
+    "bd_warehouse": "0.2.0"
+  },
+  "params": [
+    {
+      "name": "width",
+      "default": 260.0,
+      "min": 180,
+      "max": 400,
+      "unit": "mm"
+    },
+    {
+      "name": "plate_t",
+      "default": 6.0,
+      "min": 3,
+      "max": 12,
+      "unit": "mm"
+    },
+    {
+      "name": "arm_len",
+      "default": 220.0,
+      "min": 120,
+      "max": 300,
+      "unit": "mm"
+    },
+    {
+      "name": "pin_r",
+      "default": 3.0,
+      "min": 1.5,
+      "max": 5,
+      "unit": "mm"
+    }
+  ],
+  "metrics": {
+    "bbox": [
+      260.0,
+      270.0,
+      32.0
+    ],
+    "volume": 933570.07,
+    "area": 360478.583,
+    "face_count": 100,
+    "edge_count": 270,
+    "vertex_count": 180,
+    "parts": [
+      {
+        "name": "base",
+        "label": "base",
+        "path": [
+          "laptop_stand"
+        ],
+        "volume": 396171.17
+      },
+      {
+        "name": "arm",
+        "label": "arm",
+        "path": [
+          "laptop_stand"
+        ],
+        "volume": 175585.283
+      },
+      {
+        "name": "tray",
+        "label": "tray",
+        "path": [
+          "laptop_stand"
+        ],
+        "volume": 347110.963
+      },
+      {
+        "name": "pin_a",
+        "label": "pin_a",
+        "path": [
+          "laptop_stand"
+        ],
+        "volume": 7351.327
+      },
+      {
+        "name": "pin_b",
+        "label": "pin_b",
+        "path": [
+          "laptop_stand"
+        ],
+        "volume": 7351.327
+      }
+    ],
+    "build_ms": 1985
+  },
+  "fingerprint": {
+    "code_norm_sha256": "3ff4d3246bc9fd0fc3e329ca8f03964f2c66753334b54b9904ef1b6256e12429",
+    "geom": [
+      0.1185,
+      0.963,
+      0.4156,
+      37.7382,
+      4.6151,
+      1.7918
+    ]
+  },
+  "media": [
+    {
+      "file": "model.glb",
+      "kind": "model",
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/thumb.webp",
+      "kind": "thumb",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        512,
+        512
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/og.jpg",
+      "kind": "og",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        1200,
+        630
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/turntable.webp",
+      "kind": "turntable",
+      "look": "materials",
+      "size": [
+        480,
+        480
+      ],
+      "frames": 36,
+      "fps": 7.2,
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/iso.png",
+      "kind": "view",
+      "view": "iso",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          -1,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/front.png",
+      "kind": "view",
+      "view": "front",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          -1,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/top.png",
+      "kind": "view",
+      "view": "top",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          0,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/right.png",
+      "kind": "view",
+      "view": "right",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          0,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    }
+  ],
+  "created": "2026-10-08",
+  "verified": {
+    "date": "2026-10-23",
+    "build123d": "0.11.1"
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "schema": 1,
+  "id": "g_4f2e5e0d",
+  "slug": "planetary-gearbox",
+  "title": {
+    "en": "Planetary Gearbox",
+    "tr": "Planet Dişli Kutusu"
+  },
+  "summary": {
+    "en": "Sun, planets and ring with real involute teeth that mesh without interference — change the module, tooth counts or number of planets.",
+    "tr": "Gerçek evolvent dişli güneş, planet ve çember dişliler; girişim olmadan kavrar. Modülü, diş sayılarını ve planet sayısını değiştirebilirsin."
+  },
+  "tags": [
+    "gears",
+    "involute",
+    "planetary",
+    "mechanism"
+  ],
+  "category": "mechanical",
+  "source": {
+    "kind": "hand"
+  },
+  "author": {
+    "display": "Argil Design",
+    "uid_hash": null
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "2026 Argil Design",
+  "ai_training": "allowed",
+  "consent": {
+    "showcase": true,
+    "prompt": false,
+    "terms_version": "owner",
+    "recorded": "2026-10-23"
+  },
+  "derived_from": null,
+  "engine": {
+    "python": "3.12",
+    "build123d": "0.11.1",
+    "ocp": "7.9.3.1.1",
+    "bd_warehouse": "0.2.0"
+  },
+  "params": [
+    {
+      "name": "M",
+      "default": 2.0,
+      "min": 0.5,
+      "max": 4,
+      "unit": "mm",
+      "label": {
+        "en": "module",
+        "tr": "modül"
+      }
+    },
+    {
+      "name": "W",
+      "default": 10.0,
+      "min": 3,
+      "max": 30,
+      "unit": "mm",
+      "label": {
+        "en": "face width",
+        "tr": "diş genişliği"
+      }
+    },
+    {
+      "name": "N",
+      "default": 3,
+      "min": 2,
+      "max": 6,
+      "label": {
+        "en": "planets",
+        "tr": "planet sayısı"
+      }
+    }
+  ],
+  "metrics": {
+    "bbox": [
+      96.0,
+      96.0,
+      10.0
+    ],
+    "volume": 46736.398,
+    "area": 24048.427,
+    "face_count": 1970,
+    "edge_count": 5878,
+    "vertex_count": 3918,
+    "parts": [
+      {
+        "name": "part 1",
+        "label": null,
+        "path": [],
+        "volume": 3932.42
+      },
+      {
+        "name": "part 2",
+        "label": null,
+        "path": [],
+        "volume": 30448.402
+      },
+      {
+        "name": "part 3",
+        "label": null,
+        "path": [],
+        "volume": 4118.525
+      },
+      {
+        "name": "part 4",
+        "label": null,
+        "path": [],
+        "volume": 4118.525
+      },
+      {
+        "name": "part 5",
+        "label": null,
+        "path": [],
+        "volume": 4118.525
+      }
+    ],
+    "build_ms": 7917
+  },
+  "fingerprint": {
+    "code_norm_sha256": "0475365e50825b40a2acabe9ab2c2330923d059b7a8d3a491967d377f066ce6f",
+    "geom": [
+      0.1042,
+      1.0,
+      0.5071,
+      18.5346,
+      7.5863,
+      1.7918
+    ]
+  },
+  "media": [
+    {
+      "file": "model.glb",
+      "kind": "model",
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/thumb.webp",
+      "kind": "thumb",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        512,
+        512
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/og.jpg",
+      "kind": "og",
+      "view": "iso",
+      "look": "materials",
+      "size": [
+        1200,
+        630
+      ],
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/turntable.webp",
+      "kind": "turntable",
+      "look": "materials",
+      "size": [
+        480,
+        480
+      ],
+      "frames": 36,
+      "fps": 7.2,
+      "renderer": "model-viewer@4.3.1"
+    },
+    {
+      "file": "media/iso.png",
+      "kind": "view",
+      "view": "iso",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          -1,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/front.png",
+      "kind": "view",
+      "view": "front",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          -1,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/top.png",
+      "kind": "view",
+      "view": "top",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          0,
+          0,
+          1
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    },
+    {
+      "file": "media/right.png",
+      "kind": "view",
+      "view": "right",
+      "look": "plain",
+      "size": [
+        512,
+        512
+      ],
+      "camera": {
+        "dir": [
+          1,
+          0,
+          0
+        ],
+        "fit": "bbox",
+        "projection": "perspective"
+      },
+      "renderer": "argilcad@1.0.10"
+    }
+  ],
+  "created": "2026-09-08",
+  "verified": {
+    "date": "2026-10-23",
+    "build123d": "0.11.1"
+  }
+}

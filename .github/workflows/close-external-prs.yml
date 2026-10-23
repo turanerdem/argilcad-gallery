@@ -1,0 +1,23 @@
+# Models come in through ArgilCAD and are reviewed there (CONTRIBUTING.md).
+# A public repository cannot turn pull requests off, so close the ones from
+# outside, kindly. pull_request_target runs in this repository's context:
+# nothing from the pull request is checked out or run.
+name: close external pull requests
+
+on:
+  pull_request_target:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close:
+    if: github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.html_url }}
+        run: |
+          gh pr close "$PR" --comment "Thank you! Models come into the gallery through ArgilCAD itself (\"Share to gallery\"), where they are reviewed — see CONTRIBUTING.md. For anything else, write to support@argildesign.com."

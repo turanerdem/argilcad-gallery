@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/turanerdem/argilcad-gallery/schema/meta.schema.json",
+  "title": "ArgilCAD gallery entry",
+  "description": "models/<slug>/meta.json. Schema 1. model.py is the source of truth; every other file in the folder is derived from it.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "id", "slug", "title", "summary", "tags", "category", "source",
+    "author", "license", "copyright", "ai_training", "consent", "derived_from",
+    "engine", "metrics", "fingerprint", "media", "created", "verified"
+  ],
+  "properties": {
+    "schema": {"const": 1},
+    "id": {
+      "description": "Permanent id, given on first publish. Everything refers to an entry by it.",
+      "type": "string", "pattern": "^g_[0-9a-f]{8}$"
+    },
+    "slug": {
+      "description": "The folder name. May change; the id may not.",
+      "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64
+    },
+    "title": {"$ref": "#/$defs/localized", "description": "Short name, no brand or product names."},
+    "summary": {"$ref": "#/$defs/localized", "description": "One or two sentences."},
+    "tags": {
+      "type": "array", "maxItems": 12, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 32}
+    },
+    "category": {
+      "enum": ["mechanical", "enclosures", "toys", "home", "tools", "architecture",
+               "art", "vehicles", "education", "other"]
+    },
+    "prompt": {
+      "description": "The prompt that started the model, only when its author agreed to show it.",
+      "type": "object", "additionalProperties": false, "required": ["text", "lang"],
+      "properties": {
+        "text": {"type": "string", "maxLength": 4000},
+        "lang": {"type": "string", "pattern": "^[a-z]{2}$"}
+      }
+    },
+    "source": {
+      "description": "How the code was written. Lets a dataset keep or drop LLM output by provider.",
+      "type": "object", "additionalProperties": false, "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["app_llm", "mcp", "own_ai", "hand", "tool", "mixed"]},
+        "model": {"type": "string", "description": "LLM model id, when one wrote it."},
+        "client": {"type": "string", "description": "The AI client over MCP or copy-paste, e.g. Claude Code."},
+        "app_version": {"type": "string"}
+      }
+    },
+    "author": {
+      "type": "object", "additionalProperties": false, "required": ["display"],
+      "properties": {
+        "display": {"type": "string", "maxLength": 64},
+        "uid_hash": {
+          "description": "SHA-256 of the submitter's account uid, so their entries can be found for removal. Never the uid itself.",
+          "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "license": {
+      "description": "SPDX id. The gallery accepts these and no others (LICENSE.md).",
+      "enum": ["CC-BY-NC-SA-4.0", "CC-BY-NC-4.0", "CC-BY-SA-4.0", "CC-BY-4.0"]
+    },
+    "copyright": {"type": "string", "pattern": "^[0-9]{4} .+$", "description": "e.g. '2026 Argil Design'"},
+    "ai_training": {"enum": ["allowed", "reserved"]},
+    "consent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["showcase", "prompt", "terms_version", "recorded"],
+      "properties": {
+        "showcase": {"const": true},
+        "prompt": {"type": "boolean"},
+        "history": {"type": "boolean", "description": "Gave the private edit history (never in this repository)."},
+        "terms_version": {"type": "string", "description": "TERMS.md version accepted, or 'owner' for Argil Design's own models."},
+        "recorded": {"$ref": "#/$defs/date"}
+      }
+    },
+    "derived_from": {
+      "description": "id of the gallery entry this one remixes.",
+      "type": ["string", "null"], "pattern": "^g_[0-9a-f]{8}$"
+    },
+    "engine": {
+      "type": "object", "additionalProperties": false, "required": ["build123d", "ocp"],
+      "properties": {
+        "build123d": {"type": "string"},
+        "ocp": {"type": "string"},
+        "bd_warehouse": {"type": "string"},
+        "python": {"type": "string"}
+      }
+    },
+    "params": {
+      "description": "Named constants at the top of model.py that are safe to change.",
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["name", "default"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"},
+          "default": {"type": ["number", "boolean", "string"]},
+          "min": {"type": "number"},
+          "max": {"type": "number"},
+          "unit": {"type": "string"},
+          "label": {"$ref": "#/$defs/localized"}
+        }
+      }
+    },
+    "metrics": {
+      "description": "Measured the way the app measures (_measure_solid); CI measures again and compares.",
+      "type": "object", "additionalProperties": false,
+      "required": ["bbox", "volume", "area", "face_count", "edge_count", "vertex_count", "parts"],
+      "properties": {
+        "bbox": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+        "volume": {"type": "number"},
+        "area": {"type": "number"},
+        "face_count": {"type": "integer"},
+        "edge_count": {"type": "integer"},
+        "vertex_count": {"type": "integer"},
+        "parts": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["name", "volume"],
+            "properties": {
+              "name": {"type": "string"},
+              "label": {"type": ["string", "null"]},
+              "path": {"type": "array", "items": {"type": "string"}},
+              "volume": {"type": ["number", "null"]}
+            }
+          }
+        },
+        "build_ms": {"type": "integer"}
+      }
+    },
+    "fingerprint": {
+      "description": "For finding duplicates and keeping remixes on one side of a train/test split.",
+      "type": "object", "additionalProperties": false, "required": ["code_norm_sha256", "geom"],
+      "properties": {
+        "code_norm_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "geom": {"type": "array", "items": {"type": "number"}, "minItems": 6, "maxItems": 6}
+      }
+    },
+    "print": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "printed": {"type": "boolean"},
+        "grams": {"type": "number"},
+        "print_in_place": {"type": "boolean"},
+        "notes": {"type": "string", "maxLength": 500}
+      }
+    },
+    "media": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["file", "kind"],
+        "properties": {
+          "file": {"type": "string", "pattern": "^(model\\.glb|media/[a-z0-9_]+\\.(png|webp|jpg))$"},
+          "kind": {"enum": ["model", "thumb", "og", "view", "turntable", "animation"]},
+          "view": {"enum": ["iso", "front", "back", "top", "bottom", "left", "right"]},
+          "look": {"enum": ["plain", "materials"]},
+          "size": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+          "frames": {"type": "integer"},
+          "fps": {"type": "number"},
+          "camera": {
+            "type": "object", "additionalProperties": false,
+            "properties": {
+              "dir": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+              "fit": {"type": "string"},
+              "projection": {"type": "string"}
+            }
+          },
+          "renderer": {"type": "string", "description": "What drew it, e.g. argilcad@1.0.10 render_view."}
+        }
+      }
+    },
+    "created": {"$ref": "#/$defs/date"},
+    "verified": {
+      "description": "Last time CI built model.py and its metrics held.",
+      "type": "object", "additionalProperties": false, "required": ["date", "build123d"],
+      "properties": {
+        "date": {"$ref": "#/$defs/date"},
+        "build123d": {"type": "string"}
+      }
+    }
+  },
+  "$defs": {
+    "localized": {
+      "type": "object", "additionalProperties": false, "required": ["en", "tr"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1, "maxLength": 400},
+        "tr": {"type": "string", "minLength": 1, "maxLength": 400}
+      }
+    },
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+  }
+}

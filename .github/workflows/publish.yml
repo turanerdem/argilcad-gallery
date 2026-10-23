@@ -1,0 +1,23 @@
+# After a merge to main: make jsDelivr fetch the new index and READMEs now
+# rather than within its cache time, so ArgilCAD's Explore and the website
+# see a new model at once. The files themselves are committed by the publish
+# script, never by CI, so main's branch protection needs no exception.
+name: publish
+
+on:
+  push:
+    branches: [main]
+    paths: ["models/**", "index.jsonl", "README.md"]
+
+permissions:
+  contents: read
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr
+        run: |
+          for f in index.jsonl README.md; do
+            curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f" > /dev/null
+          done
